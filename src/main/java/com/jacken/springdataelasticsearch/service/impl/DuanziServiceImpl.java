@@ -6,6 +6,8 @@ import com.jacken.springdataelasticsearch.service.DuanziService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DuanziServiceImpl  implements DuanziService {
     @Autowired
@@ -14,4 +16,16 @@ public class DuanziServiceImpl  implements DuanziService {
     public DuanZi save(DuanZi duanZi) {
         return duanZiRespository.save(duanZi);
     }
+
+    @Override
+    public void delete(DuanZi duanZi) {
+        duanZiRespository.delete(duanZi);
+    }
+
+    @Override
+    public List<DuanZi> findByContent(String content) {
+        return duanZiRespository.findAllByContent(content);
+    }
+
+
 }

@@ -33,4 +33,12 @@ public class DuanZi {
     public void setContent(String content) {
         this.content = content;
     }
+
+    @Override
+    public String toString() {
+        return "DuanZi{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }
